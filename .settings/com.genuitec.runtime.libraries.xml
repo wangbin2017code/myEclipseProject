@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project>
-  <add-on id="spring.persistence"/>
   <add-on id="spring.test"/>
+  <add-on id="spring.persistence"/>
+  <container path="com.genuitec.runtime.library/com.genuitec.spring_3.1">
+    <jar-attrs id="data/3.1/dist/org.springframework.jdbc-3.1.1.RELEASE.jar">
+      <attribute name="source_encoding" value="UTF-8"/>
+      <attribute name="source-path" value="F:\mysql-jdbc-jar"/>
+      <attribute name="source-path-root"/>
+      <attribute name="javadoc_location" value="http://static.springsource.org/spring/docs/3.1.x/javadoc-api/"/>
+    </jar-attrs>
+  </container>
 </project>

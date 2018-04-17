@@ -11,7 +11,7 @@ import com.wangbin.jdbc.dao.CustomerDao;
 import com.wangbin.jdbc.model.Customer;
 
 /**
- * 通过jdgc实行数据库的操作.
+ * 通过jdbc实行数据库的操作.
  * @author wangbin
  *
  */
