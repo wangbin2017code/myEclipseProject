@@ -19,5 +19,10 @@
 	<bean id="outputHelper" class="com.wangbin.output.OutputHelper">
 		<property name="outputGenerator" ref="jsonOutputGeneratorImpl"></property>
 	</bean>
+	
+
+	<import resource ="customer/Spring-Customer.xml"/>	
+	<import resource="database/Spring-DataSource.xml"/>
+
 
 </beans>

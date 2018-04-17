@@ -7,6 +7,9 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
+		<config>HelloWorld/src/customer/Spring-Customer.xml</config>
+		<config>HelloWorld/src/database/Spring-DataSource.xml</config>
+		<config>HelloWorld/src/applicationContext.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
