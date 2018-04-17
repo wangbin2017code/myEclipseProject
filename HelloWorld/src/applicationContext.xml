@@ -9,5 +9,15 @@
 	<bean id="helloBean" class="com.wangbin.core.HelloWorld">
 		<property name="name" value="wangbin"></property>
 	</bean>
+	
+	<bean id="cVSOutputGeneratorImpl" class="com.wangbin.output.impl.CVSOutputGeneratorImpl">
+	</bean>
+	
+	<bean id="jsonOutputGeneratorImpl" class="com.wangbin.output.impl.JsonOutputGeneratorImpl">
+	</bean>
+	
+	<bean id="outputHelper" class="com.wangbin.output.OutputHelper">
+		<property name="outputGenerator" ref="jsonOutputGeneratorImpl"></property>
+	</bean>
 
 </beans>
