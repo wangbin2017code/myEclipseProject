@@ -1,5 +1,8 @@
 package com.wangbin.core;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -57,7 +60,32 @@ public class App {
 		 */
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		CustomerDao customerDao = (CustomerDao) context.getBean("customerJdbcDaoSupportImpl");
-		customerDao.insertCustomer(new Customer(3, "lisi", 54));
+		// customerDao.insertCustomer(new Customer(4, "琳达", 54));
+		// Customer customer = customerDao.findByCustomerId(4);
+		/*
+		 * List<Customer> customesList = customerDao.findAllCustomer();
+		 * customesList.forEach(customer -> { System.out.println(customer); });
+		 */
+
+		// 批量插入数据
+		/*
+		 * List<Customer> customers = new ArrayList<Customer>(); Customer
+		 * customer = new Customer(10l, "孙悟空", 100l); Customer customer1 = new
+		 * Customer(11l, "沙僧", 500l); Customer customer2 = new Customer(12l,
+		 * "唐僧", 1000l); Customer customer3 = new Customer(13l, "猪八戒", 200l);
+		 * customers.add(customer); customers.add(customer1);
+		 * customers.add(customer2); customers.add(customer3);
+		 * customerDao.insertBatch(customers);
+		 * 
+		 * int cnt = customerDao.selectAllCustomerCnt(); String name =
+		 * customerDao.selectNameById(12); System.out.println("总行数:" + cnt + " "
+		 * + "name:" + name);
+		 */
+
+		String sql2 = "UPDATE CUSTOMER SET NAME='WO'";
+		customerDao.insertBatchSql(sql2);
+		String name = customerDao.selectNameById(12);
+		System.out.println("name:" + name);
 
 	}
 

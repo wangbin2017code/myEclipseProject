@@ -8,28 +8,28 @@ package com.wangbin.jdbc.model;
  */
 public class Customer {
 
-	private int cusId;
+	private Long custId;
 
 	private String name;
 
-	private int age;
+	private Long age;
 
 	public Customer() {
 	}
 
-	public Customer(int cusId, String name, int age) {
+	public Customer(Long custId, String name, Long age) {
 		super();
-		this.cusId = cusId;
+		this.custId = custId;
 		this.name = name;
 		this.age = age;
 	}
 
-	public int getCusId() {
-		return cusId;
+	public Long getCustId() {
+		return custId;
 	}
 
-	public void setCusId(int cusId) {
-		this.cusId = cusId;
+	public void setCustId(Long custId) {
+		this.custId = custId;
 	}
 
 	public String getName() {
@@ -40,17 +40,17 @@ public class Customer {
 		this.name = name;
 	}
 
-	public int getAge() {
+	public Long getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Long age) {
 		this.age = age;
 	}
 
 	@Override
 	public String toString() {
-		return "Customer [cusId=" + cusId + ", name=" + name + ", age=" + age + "]";
+		return "Customer [custId=" + custId + ", name=" + name + ", age=" + age + "]";
 	}
 
 }
