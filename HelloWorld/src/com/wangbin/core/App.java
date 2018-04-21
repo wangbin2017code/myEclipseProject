@@ -33,15 +33,15 @@ public class App {
 		 */
 
 		/** spring jdbc */
-		/*
-		 * ApplicationContext context = new
-		 * ClassPathXmlApplicationContext("applicationContext.xml"); CustomerDao
-		 * customerDao = (CustomerDao) context.getBean("customerDao");
-		 * customerDao.insertCustomer(new Customer(1,"wangbin",24));
-		 * 
-		 * Customer customer = customerDao.findByCustomerId(1);
-		 * System.out.println(customer);
-		 */
+		
+		 ApplicationContext context = new
+		 ClassPathXmlApplicationContext("applicationContext.xml"); 
+		 CustomerDao customerDao = (CustomerDao) context.getBean("customerDao");
+		 customerDao.insertCustomer(new Customer(1l,"wangbin",24l));
+		 
+		 Customer customer = customerDao.findByCustomerId(1);
+		 System.out.println(customer);
+		 
 
 		/** spring jdbcTemplage */
 		/*
@@ -58,8 +58,8 @@ public class App {
 		/**
 		 * spring jdbcDaoSupport
 		 */
-		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		CustomerDao customerDao = (CustomerDao) context.getBean("customerJdbcDaoSupportImpl");
+		/*ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		CustomerDao customerDao = (CustomerDao) context.getBean("customerJdbcDaoSupportImpl");*/
 		// customerDao.insertCustomer(new Customer(4, "ау╢О", 54));
 		// Customer customer = customerDao.findByCustomerId(4);
 		/*
@@ -82,10 +82,10 @@ public class App {
 		 * + "name:" + name);
 		 */
 
-		String sql2 = "UPDATE CUSTOMER SET NAME='WO'";
+		/*String sql2 = "UPDATE CUSTOMER SET NAME='WO'";
 		customerDao.insertBatchSql(sql2);
 		String name = customerDao.selectNameById(12);
-		System.out.println("name:" + name);
+		System.out.println("name:" + name);*/
 
 	}
 
