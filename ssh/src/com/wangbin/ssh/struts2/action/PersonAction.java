@@ -10,7 +10,7 @@ public class PersonAction extends ActionSupport{
 	
 	public String savePerson(){
 		Person person = new Person();
-		person.setPname("test");
+		person.setPname("wangbin");
 		this.personService.savePerson(person);
 		return null;
 	}
